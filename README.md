@@ -206,8 +206,8 @@ For servers requiring authentication, use the `/plugin` menu:
 Authentication details by server:
 - **PubMed, ENCODE Toolkit**: no authentication required.
 - **10x Genomics**: provide your access token in plugin configuration.
-- **BioRender, Synapse, Wiley Scholar Gateway, Medidata**: sign in with your provider account/subscription when prompted by the server (BioRender/Synapse/Wiley require free accounts; Medidata requires a subscription).
-- **Consensus, Cortellis, AdisInsight, ToolUniverse**: authentication is handled through each provider's account/subscription flow when connecting to the server.
+- **BioRender, Synapse, Wiley Scholar Gateway**: sign in with your provider account when prompted by the server (all three use free accounts).
+- **Consensus, Cortellis, AdisInsight, ToolUniverse, Medidata**: authentication is handled through each provider's account/subscription flow when connecting to the server.
 
 Or authenticate through the server's web interface when prompted.
 
