@@ -209,7 +209,7 @@ Or authenticate through the server's web interface when prompted.
 
 Restart to activate the MCP servers.
 
-## Authentication Requirements
+## Authentication Requirements (MCP servers only)
 
 - **No authentication**: PubMed, ENCODE Toolkit
 - **Plugin token configuration required**: 10x Genomics (requires a 10x Genomics Cloud account and data in account to be useful)
