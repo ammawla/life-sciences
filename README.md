@@ -205,6 +205,7 @@ For servers requiring authentication, use the `/plugin` menu:
 
 Authentication details by server:
 - **10x Genomics**: provide your access token in plugin configuration.
+- **BioRender, Synapse, Wiley Scholar Gateway, Medidata**: sign in with your provider account/subscription when prompted by the server.
 - **Consensus, Cortellis, AdisInsight, ToolUniverse**: authentication is handled through each provider's account/subscription flow when connecting to the server.
 
 Or authenticate through the server's web interface when prompted.
