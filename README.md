@@ -212,7 +212,7 @@ Restart to activate the MCP servers.
 ## Authentication Requirements
 
 - **No authentication**: PubMed, ENCODE Toolkit
-- **Free account required**: BioRender, Synapse, Wiley Scholar Gateway, Consensus
+- **Free account required**: BioRender, Synapse, Wiley Scholar Gateway, Consensus, ToolUniverse
 - **Paid/institutional account**: 10x Genomics (requires data in account to be useful), Cortellis, AdisInsight, Medidata
 
 ## Support
