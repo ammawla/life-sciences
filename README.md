@@ -203,6 +203,10 @@ For servers requiring authentication, use the `/plugin` menu:
 4. Select "Configure" (if available)
 5. Enter your API credentials
 
+Authentication details by server:
+- **10x Genomics**: provide your access token in plugin configuration.
+- **Consensus, Cortellis, AdisInsight, ToolUniverse**: authentication is handled through each provider's account/subscription flow when connecting to the server.
+
 Or authenticate through the server's web interface when prompted.
 
 ### 4. Restart Claude Code
