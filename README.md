@@ -205,7 +205,7 @@ For servers requiring authentication, use the `/plugin` menu:
 
 Authentication details by server:
 - **PubMed, ENCODE Toolkit**: no authentication required.
-- **10x Genomics**: provide your access token in plugin configuration.
+- **10x Genomics**: requires a 10x Genomics Cloud account plus access token in plugin configuration.
 - **BioRender, Synapse, Wiley Scholar Gateway**: sign in with your provider account when prompted by the server (all three use free accounts).
 - **Consensus, Cortellis, AdisInsight, ToolUniverse, Medidata**: authentication is handled through each provider's account/subscription flow when connecting to the server.
 
@@ -218,7 +218,7 @@ Restart to activate the MCP servers.
 ## Authentication Requirements
 
 - **No authentication**: PubMed, ENCODE Toolkit
-- **Plugin token configuration required**: 10x Genomics (requires data in account to be useful)
+- **Plugin token configuration required**: 10x Genomics (requires a 10x Genomics Cloud account and data in account to be useful)
 - **Provider account/subscription authentication flow**: BioRender (free account), Synapse (free account), Wiley Scholar Gateway (free account), Consensus (account), ToolUniverse (account), Medidata (subscription), Cortellis (subscription), AdisInsight (subscription)
 
 ## Support
