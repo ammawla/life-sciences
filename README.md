@@ -18,15 +18,17 @@ This marketplace provides MCP (Model Context Protocol) servers and skills for li
 /plugin install synapse@life-sciences
 /plugin install wiley-scholar-gateway@life-sciences
 /plugin install 10x-genomics@life-sciences
+/plugin install encode-toolkit@life-sciences
 
 # Install skills
 /plugin install single-cell-rna-qc@life-sciences
 /plugin install instrument-data-to-allotrope@life-sciences
 /plugin install nextflow-development@life-sciences
 /plugin install scvi-tools@life-sciences
+/plugin install scientific-problem-selection@life-sciences
 ```
 
-For servers requiring authentication (all except PubMed), configure credentials after installation:
+For servers requiring authentication (PubMed and ENCODE Toolkit do not require authentication), configure credentials after installation:
 1. Type `/plugin` in Claude Code
 2. Select "Manage plugins"
 3. Find your installed server
@@ -66,6 +68,27 @@ Access academic research and publications from Wiley's Scholar Gateway.
 
 **Requirements**: Free Scholar Gateway account
 
+#### Consensus
+**Plugin ID**: `consensus@life-sciences`
+
+AI-powered search across 200M+ peer-reviewed scientific research papers, with evidence synthesis.
+
+**Requirements**: Consensus account (https://consensus.app)
+
+#### Cortellis Regulatory Intelligence (Clarivate)
+**Plugin ID**: `cortellis@life-sciences`
+
+Global drug regulatory intelligence covering submissions, approvals, and guidance documents.
+
+**Requirements**: Cortellis subscription (https://clarivate.com/cortellis)
+
+#### AdisInsight (Springer Nature)
+**Plugin ID**: `adisinsight@life-sciences`
+
+Drug development pipeline, clinical trials, safety, and deals intelligence.
+
+**Requirements**: AdisInsight subscription (https://adisinsight.springer.com)
+
 ### Local MCP Servers (MCPB)
 
 #### 10x Genomics Cloud
@@ -77,6 +100,24 @@ Access 10x Genomics Cloud analysis data and workflows.
 - 10x Genomics Cloud account (https://www.10xgenomics.com/products/cloud-analysis)
 - Access token (generate from: https://cloud.10xgenomics.com/account/security)
 - Note: Only useful if you have analysis data in your account
+
+#### ENCODE Toolkit
+**Plugin ID**: `encode-toolkit@life-sciences`
+
+MCP server for the ENCODE Project (encodeproject.org) with tools for searching experiments, downloading files with MD5 verification, tracking provenance, and cross-referencing public genomics resources.
+
+**Features:**
+- Search across 15 assay types (ChIP-seq, ATAC-seq, RNA-seq, WGBS, Hi-C, CUT&RUN, and more)
+- Download files with automatic MD5 verification
+- 47 expert skills including 7 Nextflow pipelines
+- Cross-references PubMed, GTEx, ClinVar, GWAS Catalog, gnomAD, Ensembl, UCSC, JASPAR, CellxGene
+
+**Requirements**:
+- Node.js 16+ (for the `npx` launcher)
+- One of:
+  - `uv` installed (recommended): `curl -LsSf https://astral.sh/uv/install.sh | sh`
+  - Python 3.10+ with PyPI package installed: `pip install encode-toolkit`
+- No authentication required for public ENCODE data
 
 ### Skills
 
@@ -113,6 +154,17 @@ Run nf-core bioinformatics pipelines (rnaseq, sarek, atacseq) on local or public
 
 Deep learning toolkit for single-cell omics analysis using scvi-tools. Includes model selection guidance, training workflows, and integration pipelines for scVI, scANVI, totalVI, PeakVI, MultiVI, and more.
 
+#### Scientific Problem Selection
+**Plugin ID**: `scientific-problem-selection@life-sciences`
+
+Systematic framework for scientific problem selection and strategic research decisions. Based on Fischbach & Walsh's methodology from Cell (2024), this skill helps researchers with project ideation, risk assessment, troubleshooting stuck projects, and strategic scientific planning.
+
+**Use cases:**
+- Pitch and refine new research ideas
+- Evaluate project risks and feasibility
+- Navigate decision trees in active projects
+- Strategic research planning and problem choice
+
 ## Detailed Installation
 
 ### 1. Add the marketplace (one time)
@@ -124,20 +176,22 @@ Deep learning toolkit for single-cell omics analysis using scvi-tools. Includes 
 ### 2. Install specific plugins
 
 ```bash
-# Remote MCP servers (no configuration needed for PubMed)
+# Remote MCP servers (PubMed requires no authentication)
 /plugin install pubmed@life-sciences
 /plugin install biorender@life-sciences
 /plugin install synapse@life-sciences
 /plugin install wiley-scholar-gateway@life-sciences
 
-# Local MCP servers (require configuration)
+# Local MCP servers (require local setup; ENCODE Toolkit does not require authentication)
 /plugin install 10x-genomics@life-sciences
+/plugin install encode-toolkit@life-sciences
 
 # Skills (no configuration needed)
 /plugin install single-cell-rna-qc@life-sciences
 /plugin install instrument-data-to-allotrope@life-sciences
 /plugin install nextflow-development@life-sciences
 /plugin install scvi-tools@life-sciences
+/plugin install scientific-problem-selection@life-sciences
 ```
 
 ### 3. Configure credentials (if needed)
@@ -157,9 +211,9 @@ Restart to activate the MCP servers.
 
 ## Authentication Requirements
 
-- **No authentication**: PubMed
-- **Free account required**: BioRender, Synapse, Wiley Scholar Gateway
-- **Paid/institutional account**: 10x Genomics (requires data in account to be useful)
+- **No authentication**: PubMed, ENCODE Toolkit
+- **Free account required**: BioRender, Synapse, Wiley Scholar Gateway, Consensus
+- **Paid/institutional account**: 10x Genomics (requires data in account to be useful), Cortellis, AdisInsight
 
 ## Support
 
